@@ -15,10 +15,15 @@ Hipotesis
 -Las presencia de diabetes es el principal factor causante en relacion a los demas 
 -La edad no es un factor relevante 
 -El bajo nivel de actividad fisica, aumenta el riesgo cardiaco.
--
 
 
-Consultas en SQL Server 
+EXEL: 
+Comence la limpieza de datos con excel, donde verifique que todos los campos esten completos, sin valores nulos o vacíos, reemplace (función buscar y reemplazar) los valores que estaban en inglés al español, al igual que aquellos que tenian número(0,1), por las opciones si y no.
+Se creo la columna de ID para identificar a cada una de las personas, y definir PK. 
+Se crearon tablas para evitar la rebundancia de datos, atraves del proceso de normalización . 
+
+
+SQL Server 
 A parir de la siguiente consulta se obutvo la cantidad de personas que tenian nivel de actividad fisica "ALTO" y se hizo una union derecha con la tabla riesgo_ infarto. A partir de la segunda tabla se dio a la conocer las personas que coincidian con la primera concidición (tabla1) y a su vez con la segunda condición "BAJO". 
 
 SELECT  count (AF.ID_INDIVIDUO) Cantidad_ind FROM ['ACTIVIDAD FISICA] AF
@@ -29,5 +34,8 @@ Resultado:
 4944
 
 
-
+POWER BI:
+Se cargo el archivo desde exel,luego se verifico que no haya campos vacíos y se corroboraron las relaciones en el diagrama. Entre las tablas RIESGO INFARTO y REFERENCIA CARDIACA, se detecto una relación de muchos a muchos, por lo que tuve que crear una tercera tabla para modifica esa relación. 
+Para generar esa tercera tabla, que se llama clasificación_riego, entre a tranformar datos, luego anexar, combine las dos tablas antes mencionadas y luego filtre unicamente la clasificacion de riesgo para generar esta nueva tabla. Esta nueva tabla me permitió crear relacion de uno a muchos (1:*) entre ambas tablas. 
+En el diagrama tambien se puede observar una tabla aislada que se llama calculos, en la cual guarde los calculos que fui necesitando .(vista de modelo, especificar datos)
 
