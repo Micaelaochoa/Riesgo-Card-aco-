@@ -4,7 +4,7 @@
 Los ataques cardíacos son una de las principales causas de muerte a nivel mundial y la predicción temprana del riesgo puede reducir significativamente las tasas de mortalidad.Existen numerosos factores que si son controlados y tratados a tiempo ayudan a prevenir el riesgo. 
 Un factor de riesgo cardiovascular (FRCV) es una característica biológica o un hábito o estilo de vida que aumenta la probabilidad de padecer o de fallecer a causa de una enfermedad cardiovascular (ECV), en aquellos individuos que lo padecen.
 
-Este dataset fui obtenido de la pagina kaggle. El mismo contiene 50000 filas, cada una representa a un individuo. 
+Este dataset fui obtenido de la pagina kaggle. El mismo contiene 15000 filas, cada una representa a un individuo. 
 El conjunto de datos de predicción de riesgo de ataque cardíaco es un conjunto de datos sintético diseñado para modelar factores de la vida real que influyen en los riesgos de ataque cardíaco.En los registros hay información sobre  los diferentes factores que pueden infuir en el riesgo de ataque cardíaco. Estos son: edad,género,actividad fisica,indice de masa corporal (IMC), colesterol,diabetes,riesgo cardiaco,hipertensión arterial, fumador,consumo de alcohol, electrocardiograma e historia familiar. 
 
 Preguntas
@@ -35,7 +35,8 @@ Resultado:
 
 
 POWER BI:
-Se cargo el archivo desde exel,luego se verifico que no haya campos vacíos y se corroboraron las relaciones en el diagrama. Entre las tablas RIESGO INFARTO y REFERENCIA CARDIACA, se detecto una relación de muchos a muchos, por lo que tuve que crear una tercera tabla para modifica esa relación. 
-Para generar esa tercera tabla, que se llama clasificación_riego, entre a tranformar datos, luego anexar, combine las dos tablas antes mencionadas y luego filtre unicamente la clasificacion de riesgo para generar esta nueva tabla. Esta nueva tabla me permitió crear relacion de uno a muchos (1:*) entre ambas tablas. 
+Se cargo el archivo desde exel,luego se verifico que no haya campos vacíos y se corroboraron las relaciones en el diagrama. 
 En el diagrama tambien se puede observar una tabla aislada que se llama calculos, en la cual guarde los calculos que fui necesitando .(vista de modelo, especificar datos)
+Algunas medidas dax que utilizé: 
+
 
