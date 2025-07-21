@@ -16,27 +16,10 @@ Hipotesis
 -La edad no es un factor relevante 
 -El bajo nivel de actividad fisica, aumenta el riesgo cardiaco.
 
+Se realizó el analisis estadístico de los datos donde se importo el dataset en un notebook de jupyter
+Donde se importaron las librerias(pandas,numpy)para la visualización, limpieza y análisis de los datos. 
 
-EXEL: 
-Comence la limpieza de datos con excel, donde verifique que todos los campos esten completos, sin valores nulos o vacíos, reemplace (función buscar y reemplazar) los valores que estaban en inglés al español, al igual que aquellos que tenian número(0,1), por las opciones si y no.
-Se creo la columna de ID para identificar a cada una de las personas, y definir PK. 
-Se crearon tablas para evitar la rebundancia de datos, atraves del proceso de normalización . 
+ 
 
-
-SQL Server 
-A parir de la siguiente consulta se obutvo la cantidad de personas que tenian nivel de actividad fisica "ALTO" y se hizo una union derecha con la tabla riesgo_ infarto. A partir de la segunda tabla se dio a la conocer las personas que coincidian con la primera concidición (tabla1) y a su vez con la segunda condición "BAJO". 
-
-SELECT  count (AF.ID_INDIVIDUO) Cantidad_ind FROM ['ACTIVIDAD FISICA] AF
-RIGHT JOIN RIESGO_INFARTO R
-ON AF.ID_INDIVIDUO = R.ID_INDIVIDUO
-WHERE [Nivel de actividad Fisica] ='ALTO' AND RIESGO = 'BAJO'
-Resultado:
-4944
-
-
-POWER BI:
-Se cargo el archivo desde exel,luego se verifico que no haya campos vacíos y se corroboraron las relaciones en el diagrama. 
-En el diagrama tambien se puede observar una tabla aislada que se llama calculos, en la cual guarde los calculos que fui necesitando .(vista de modelo, especificar datos)
-Algunas medidas dax que utilizé: 
 
 
